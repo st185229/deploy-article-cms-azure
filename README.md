@@ -9,6 +9,12 @@ This project is a Python web application built using Flask. The user can log in 
 
 Or, once the MS Login button is implemented, it will automatically log into the `admin` account.
 
+![login with pass](example_images/login_with_pass.png)
+![login with ad](example_images/login_with_ad.png)
+
+once you login, you get to home page
+![home page](example_images/homepage.png)
+
 ## Project Instructions (For Student)
 
 You are expected to do the following to complete this project:
@@ -26,8 +32,6 @@ You are expected to do the following to complete this project:
 
 - [x] User Table
 
-
-
 1. Create a Storage Container in Azure for `images` to be stored in a container.
     - Provide a screenshot of the storage endpoint URL as detailed further
 
@@ -35,11 +39,10 @@ You are expected to do the following to complete this project:
 
 ![screenshot ](/example_images/storage_ep.png)
 
-
 1. Add functionality to the Sign In With Microsoft button.
     - This will require completing TODOs in `views.py` with the `msal` library, along with appropriate registration in Azure Active Directory.
   
-- [x] Updated view.py and config.py and tested the application locally with Azure active directory and database
+- [x] Updated view.py and config.py and tested the application locally with Azure active directory and database. Please refer [view.py](FlaskWebProject/views.py) 
   
 1. Choose to use either a VM or App Service to deploy the FlaskWebProject to Azure. Complete the analysis template in `WRITEUP.md` (or include in the README) to compare the two options, as well as detail your reasoning behind choosing one or the other. Once you have made your choice, go through with deployment.
 
@@ -58,15 +61,19 @@ Please refer code here [`__init__.py`](FlaskWebProject/__init__.py) and [`views.
 - Upload an image of your choice. Must be either a .png or .jpg.
    After saving, click back on the article you created and provide a screenshot proving that it was created successfully. Please also make sure the URL is present in the screenshot.
 
-
-
 The List of the blogs below
 
-
-
 1. Log into the Azure Portal, go to your Resource Group, and provide a screenshot including all of the resources that were created to complete this project. (see sample screenshot in "example_images" folder)
-2. Take a screenshot of the Redirect URIs entered for your registered app, related to the MS Login button.
-3. Take a screenshot of your logs (can be from the Log stream in Azure) showing logging from an attempt to sign in with an invalid login, as well as a valid login.
+
+- [x] See section below under screenshot
+
+1. Take a screenshot of the Redirect URIs entered for your registered app, related to the MS Login button.
+
+- [x] See section below under screenshot
+  
+1. Take a screenshot of your logs (can be from the Log stream in Azure) showing logging from an attempt to sign in with an invalid login, as well as a valid login.
+
+- [x] See section below under screenshot
 
 ## example_images Folder
 
@@ -80,7 +87,7 @@ This folder contains sample screenshots that students are required to submit in 
 
 ![blog list](example_images/blog_list.png)
 
-2. azure-portal-resource-group.png is a screenshot from the Azure Portal showing all of the contents of the Resource Group the student needs to create. The resource group must (at least) contain the following:
+1. azure-portal-resource-group.png is a screenshot from the Azure Portal showing all of the contents of the Resource Group the student needs to create. The resource group must (at least) contain the following:
 
 - Storage Account
   - SQL Server
@@ -103,6 +110,7 @@ This folder contains sample screenshots that students are required to submit in 
 ![uri redirect](example_images/uri-redirects-solution.png)
 
 ![ app registration](example_images/app_registraion_1.png)
+
 1. log-solution.png is a screenshot showing one potential form of logging with an "Invalid login attempt" and "admin logged in successfully", taken from the app's Log stream. You can customize your log messages as you see fit for these situations.
 
 ![login](example_images/login_out.png)
