@@ -26,7 +26,7 @@ You are expected to do the following to complete this project:
 
 - [x] User Table
 
-![user  table](/example_images/users_tables.png)
+
 
 1. Create a Storage Container in Azure for `images` to be stored in a container.
     - Provide a screenshot of the storage endpoint URL as detailed further
@@ -35,9 +35,6 @@ You are expected to do the following to complete this project:
 
 ![screenshot ](/example_images/storage_ep.png)
 
-- [x] Sample image
-
-![Image from storage endpoint](https://cmsstorage03042021.blob.core.windows.net/images/WIN_20200729_19_10_30_Pro.jpg)
 
 1. Add functionality to the Sign In With Microsoft button.
     - This will require completing TODOs in `views.py` with the `msal` library, along with appropriate registration in Azure Active Directory.
@@ -46,13 +43,14 @@ You are expected to do the following to complete this project:
   
 1. Choose to use either a VM or App Service to deploy the FlaskWebProject to Azure. Complete the analysis template in `WRITEUP.md` (or include in the README) to compare the two options, as well as detail your reasoning behind choosing one or the other. Once you have made your choice, go through with deployment.
 
+- [x] The document is [here](WRITEUP.md)
 
-
-
-
-2. Add logging for whether users successfully or unsuccessfully logged in.
+1. Add logging for whether users successfully or unsuccessfully logged in.
     - This will require completing TODOs in `__init__.py`, as well as adding logging where desired in `views.py`.
-3. To prove that the application in on Azure and working, go to the URL of your deployed app, log in using the credentials in this README, click the Create button, and create an article with the following data:
+
+Please refer code here [`__init__.py`](FlaskWebProject/__init__.py) and [`views.py`](FlaskWebProject/views.py)
+
+1. To prove that the application in on Azure and working, go to the URL of your deployed app, log in using the credentials in this README, click the Create button, and create an article with the following data:
 
 - Title: "Hello World!"
 - Author: "Jane Doe"
@@ -60,26 +58,56 @@ You are expected to do the following to complete this project:
 - Upload an image of your choice. Must be either a .png or .jpg.
    After saving, click back on the article you created and provide a screenshot proving that it was created successfully. Please also make sure the URL is present in the screenshot.
 
+
+
+The List of the blogs below
+
+
+
 1. Log into the Azure Portal, go to your Resource Group, and provide a screenshot including all of the resources that were created to complete this project. (see sample screenshot in "example_images" folder)
-1. Take a screenshot of the Redirect URIs entered for your registered app, related to the MS Login button.
-1. Take a screenshot of your logs (can be from the Log stream in Azure) showing logging from an attempt to sign in with an invalid login, as well as a valid login.
+2. Take a screenshot of the Redirect URIs entered for your registered app, related to the MS Login button.
+3. Take a screenshot of your logs (can be from the Log stream in Azure) showing logging from an attempt to sign in with an invalid login, as well as a valid login.
 
 ## example_images Folder
 
 This folder contains sample screenshots that students are required to submit in order to prove they completed various tasks throughout the project.
 
 1. article-cms-solution.png is a screenshot from running the FlaskWebProject on Azure and prove that the student was able to create a new entry. The Title, Author, and Body fields must be populated to prove that the data is being retrieved from the Azure SQL Database while the image on the right proves that an image was uploaded and pulled from Azure Blob Storage.
-1. azure-portal-resource-group.png is a screenshot from the Azure Portal showing all of the contents of the Resource Group the student needs to create. The resource group must (at least) contain the following:
+
+![Article CMS Solution](example_images/blog.png)
+
+![ My blog](example_images/my_blog.png)
+
+![blog list](example_images/blog_list.png)
+
+2. azure-portal-resource-group.png is a screenshot from the Azure Portal showing all of the contents of the Resource Group the student needs to create. The resource group must (at least) contain the following:
 
 - Storage Account
   - SQL Server
   - SQL Database
   - Resources related to deploying the app
+![azure portal resource group](example_images/rg_details.png)
 
 1. sql-storage-solution.png is a screenshot showing the created tables and one query of data from the initial scripts.
-1. blob-solution.png is a screenshot showing an example of blob endpoints for where images are sent for storage.
+![tables and queries](example_images/sql-storage-solution.png)
+
+   
+2. blob-solution.png is a screenshot showing an example of blob endpoints for where images are sent for storage.
+
+![blob solution](example_images/storage_acc_1.png)
+![blob solution](example_images/storage_acc_2.png)
+![ Storage Image](example_images/storage_ep_images.png)
+
 1. uri-redirects-solution.png is a screenshot of the redirect URIs related to Microsoft authentication.
+
+![uri redirect](example_images/uri-redirects-solution.png)
+
+![ app registration](example_images/app_registraion_1.png)
 1. log-solution.png is a screenshot showing one potential form of logging with an "Invalid login attempt" and "admin logged in successfully", taken from the app's Log stream. You can customize your log messages as you see fit for these situations.
+
+![login](example_images/login_out.png)
+
+![Invalid login](example_images/Inavlid_login.png)
 
 ## Dependencies
 
